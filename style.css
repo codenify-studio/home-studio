@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: rejoiuce;
+  src: url(./Rejouice-Headline.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  overflow-x: hidden;
+  user-select: none;
+}
+nav {
+  width: 100%;
+  height: 100px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  position: fixed;
+  z-index: 9999;
+}
+#page1 {
+  width: 100%;
+  height: 100vh;
+  background: #222222;
+  position: relative;
+}
+#page1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.banner-content-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #22222221;
+  display: flex;
+  z-index: 10;
+  align-items: flex-end;
+  justify-content: center;
+}
+.video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: #00000021;
+}
+#page1 h1 {
+  font-size: 27.5vw;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: rejoiuce;
+  line-height: 0.8;
+}
+#cursor {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff5f38;
+  border-radius: 50%;
+  pointer-events: none;
+  color: #000000;
+  font-weight: 500;
+  font-size: 18px;
+  scale: 0;
+  z-index: 9;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+#page2 {
+  width: 100%;
+  height: 160vh;
+  /* background: #222222; */
+  position: relative;
+  padding: 80px 30px;
+}
+.about-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0px;
+  border-bottom: 1px solid #222222;
+}
+.about-heading h4 {
+  font-size: 20px;
+  color: #222222;
+  font-weight: 400;
+  will-change: transform;
+  opacity: 0;
+}
+.about-content {
+  margin: 20px auto;
+}
+.about-content h2 {
+  font-size: 60px;
+  color: #272727;
+  letter-spacing: -1px;
+  font-weight: 400;
+  will-change: transform;
+  opacity: 0;
+}
+.split * {
+  will-change: transform;
+}
+#line-animation {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.svg-wrap {
+  position: absolute;
+  inset: 0;
+}
+
+svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.draw-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  /* animation: drawLine 3s ease-out forwards; */
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+#page3 {
+  width: 100%;
+  height: 100vh;
+  background: #222222;
+  position: relative;
+  padding: 50px 30px;
+}
