@@ -13,10 +13,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
+    <nav id="navbar">
       <div class="logo">Codenify | Studio®</div>
       <div class="menu">Menu</div>
     </nav>
@@ -26,12 +30,13 @@
         <div class="video-overlay"></div>
         <video loop muted autoplay src="./assets/media/reel-short.mp4"></video>
         <div class="banner-content-wrapper">
-          <h1>rejouice</h1>
+          <h1 id="banner-text">codenify</h1>
         </div>
       </div>
       <div id="page2">
+        <!-- followPath -->
         <div class="line-animation">
-          <div class="svg-wrap">
+          <!-- <div class="svg-wrap">
             <svg
               viewBox="0 0 2112 1481"
               preserveAspectRatio="xMidYMid slice"
@@ -46,9 +51,9 @@
                 stroke-linecap="round"
               />
             </svg>
-          </div>
+          </div> -->
         </div>
-
+         <!-- followPath end -->
         <div class="about-heading">
           <h4 class="split">Full-service creative agency</h4>
           <h4 class="split">Paris & San Diego</h4>
@@ -62,7 +67,39 @@
           </h2>
         </div>
       </div>
-      <div id="page3"></div>
+      <div id="page3">
+        <div class="page3-top">
+          <h4>Codenify Studio <span>Creative</span></h4>
+          <h2>Explore our Services</h2>
+          <h2>& engagement models</h2>
+          <!-- <div class="text-hover-box">
+            <div class="underline"></div>
+            <span class="first">Get to Know Us</span>
+            <span class="second">About Us</span>
+            
+          </div> -->
+        </div>
+        <div class="about-heading video-head">
+          <h4 class="split">Transforming vision into brand.</h4>
+          <h4 class="split"><i class="ri-corner-down-right-line"></i>See the work</h4>
+        </div>
+        <div class="page3_element">
+          <div class="box">
+            <img src="./assets/media/work-1.jpg" alt="">
+            <video loop autoplay muted src="./assets/media/Website-homepage-Work-01_1.mp4"></video>
+          </div>
+          <div class="box">
+            <img src="./assets/media/work-2.jpg" alt="">
+            <video loop autoplay muted src="./assets/media/Website-homepage-Work-02_1.mp4"></video>
+          </div>
+          <div class="box">
+            <img src="./assets/media/work-3.jpg" alt="">
+            <video loop autoplay muted src="./assets/media/Website-homepage-Work-03_1.mp4"></video>
+          </div>
+          
+        </div>
+      </div>
+      <div id="page4"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
