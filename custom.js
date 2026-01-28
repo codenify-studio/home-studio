@@ -254,14 +254,25 @@ gsap.to(".portfolio-top-head h2", {
 });
 
 function swipereffect() {
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+  // var swiper = new Swiper(".mySwiper", {
+  //   slidesPerView: "auto",
+  //   spaceBetween: 10,
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 2500,
+  //     disableOnInteraction: false,
+  //   },
+  // });
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
     spaceBetween: 10,
     loop: true,
+    speed: 10000, 
     autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+      delay: 0,
+      disableOnInteraction: false
     },
+    allowTouchMove: false,
   });
 }
 swipereffect();
