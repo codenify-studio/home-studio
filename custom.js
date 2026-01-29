@@ -131,7 +131,7 @@ function splitTexteffectPro() {
             trigger: "#page4",
             scroller: "#main",
             start: "top 50%",
-            // end: "top 20%",
+            end: "top 20%",
             // toggleActions: "play none none reverse",
             // markers: true
           },
@@ -267,10 +267,10 @@ function swipereffect() {
     slidesPerView: "auto",
     spaceBetween: 10,
     loop: true,
-    speed: 10000, 
+    speed: 10000,
     autoplay: {
       delay: 0,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
     allowTouchMove: false,
   });
@@ -409,5 +409,54 @@ function ToggleMenu() {
   });
 }
 ToggleMenu();
+
+var fh1 = document.querySelector("#footer-text");
+var fh1Text = fh1.textContent;
+var ftextSplit = fh1Text.split("");
+var clutter = "";
+
+ftextSplit.forEach((elem) => {
+  clutter += `<span>${elem}</span>`;
+});
+fh1.innerHTML = clutter;
+
+gsap.from("#footer-text span", {
+  y: -120,
+  opacity: 0,
+  duration: 0.8,
+  delay: 1,
+  stagger: 0.1,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".footer-wrapper",
+    scroller: "#main",
+    start: "top 70%",
+    end: "top 20%",
+    toggleActions: "play none none reverse",
+  },
+});
+
+var footerBox = document.querySelector(".footer-wrapper");
+var footerCursor = document.querySelector(".footer-circle");
+
+footerBox.addEventListener("mousemove", function (flame) {
+  gsap.to(footerCursor, {
+    x: flame.x - 50,
+    y: flame.y - 50,
+    ease: "power3.out",
+  });
+});
+footerBox.addEventListener("mouseenter", function () {
+  gsap.to(footerCursor, {
+    opacity: 0.7,
+    scale: 1,
+  });
+});
+footerBox.addEventListener("mouseleave", function () {
+  gsap.to(footerCursor, {
+    opacity: 0,
+    scale: 0,
+  });
+});
 
 underlineButton();
