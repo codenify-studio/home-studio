@@ -267,12 +267,14 @@ function swipereffect() {
     slidesPerView: "auto",
     spaceBetween: 10,
     loop: true,
-    speed: 10000,
+    freeMode:true,
+    freeModeMomentum:false,
+    speed: 6000,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
     },
-    allowTouchMove: false,
+    // allowTouchMove: false,
   });
 }
 swipereffect();
