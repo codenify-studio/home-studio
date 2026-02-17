@@ -241,17 +241,48 @@ gsap.to("#page5 .counter h5", {
   },
 });
 
+function mediaexp() {
+  let mm = gsap.matchmedia();
+  mm.add({
+    "(min-width: 769px)": function () {
+      gsap.to(".portfolio-top-head h2", {
+        x: 280,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#page6",
+          scroller: "#main",
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      });
+    },
+    "(max-width: 769px)": function () {
+      gsap.to(".portfolio-top-head h2", {
+        x: 120,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#page6",
+          scroller: "#main",
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      });
+    },
+  });
+}
 gsap.to(".portfolio-top-head h2", {
-  x: 280,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: "#page6",
-    scroller: "#main",
-    start: "top 80%",
-    end: "bottom 20%",
-    scrub: true,
-  },
-});
+        x: 280,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#page6",
+          scroller: "#main",
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+        },
+      });
 
 function swipereffect() {
   // var swiper = new Swiper(".mySwiper", {
@@ -267,8 +298,8 @@ function swipereffect() {
     slidesPerView: "auto",
     spaceBetween: 10,
     loop: true,
-    freeMode:true,
-    freeModeMomentum:false,
+    freeMode: true,
+    freeModeMomentum: false,
     speed: 6000,
     autoplay: {
       delay: 0,
