@@ -111,7 +111,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .toggle-menu .toggle {
-    width: 70%;
+    width: 76%;
     gap: 40px;
     padding: 40px;
   }
@@ -209,7 +209,7 @@
 /* Small mobile */
 @media (max-width: 480px) {
       #page1 {
-    height: 100vh;
+    height: 100dvh;
   }
   nav {
     width: 100%;
@@ -277,10 +277,10 @@ nav.active {
     margin-top: -10px;
 }
 #page6 {
-    height: 120vh;
+    height: 100vh;
 }
 .text-hover-box {
-    margin-top: 40px;
+    margin-top: -25px;
 }
 .text-hover-box span {
     font-size: 36px;
@@ -288,15 +288,135 @@ nav.active {
 .underline {
     bottom: 4px;
     height: 2px;
-}
+} 
 .videowrapper {
     height: 40vh;
 }
+ #page7 {
+    height: 120vh;
+    padding: 0 10px;
+  }
 .footer-wrapper {
     min-height: 100vh;
-    padding: 20px 15px;
+    padding: 10px 15px;
 }
 #footer-text {
     font-size: 21.5vw;
 }
+#loader h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+.fakewrapper {
+    background: #000000;
+    background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) calc(100% - 10px),
+    rgba(255, 255, 255, 1) 30px
+  );
+}
+}
+
+/* ---------- Tablet (≤992px) ---------- */
+@media (max-width: 992px) {
+  .footer-wrapper h5 {
+    font-size: 36px;
+  }
+
+  .doit-once {
+    width: 55%;
+  }
+
+  .footer-links {
+    width: auto;
+  }
+}
+
+/* ---------- Mobile (≤768px) ---------- */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    min-height: unset;
+    padding: 40px 20px 20px;
+  }
+
+  /* Stack all three columns vertically */
+  .top-footer-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Hero copy block — full width */
+  .doit-once {
+    width: 100%;
+  }
+
+  .footer-wrapper h5 {
+    font-size: 28px;
+  }
+
+  /* Contact info: loosen the cramped fixed height/gap */
+  .footer-wrapper .contact-info {
+    height: auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  /* Newsletter form — full width */
+  .formbox {
+    max-width: 100%;
+  }
+
+  /* Link columns sit side-by-side in a row */
+  .footer-links-row {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .footer-links {
+    width: auto;
+    max-width: none;
+  }
+
+  /* Big brand text */
+  #footer-text {
+    font-size: 22vw;
+  }
+}
+
+/* ---------- Small mobile (≤480px) ---------- */
+@media (max-width: 480px) {
+  .footer-wrapper {
+    padding: 30px 15px 15px;
+  }
+
+  .footer-wrapper h5 {
+    font-size: 24px;
+  }
+
+  .footer-wrapper .contact-info {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .footer-wrapper .contact-info h5 {
+    font-size: 14px;
+  }
+
+  /* Stack link columns on very small screens too */
+  .footer-links-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #footer-text {
+    font-size: 21vw;
+  }
+
+  .footer-h1-wrapper {
+    padding-bottom: 5px;
+  }
 }
