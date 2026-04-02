@@ -268,7 +268,7 @@ nav.active {
 }
 .portfolio-top-head h2 {
     font-size: 60px;
-    margin-left: -170px;
+    /* margin-left: -170px; */
 }
 .line-animation{
   display: none;

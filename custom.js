@@ -242,7 +242,7 @@ gsap.to("#page5 .counter h5", {
 });
 
 function mediaexp() {
-  let mm = gsap.matchmedia();
+  var mm = gsap.matchMedia();
   mm.add({
     "(min-width: 769px)": function () {
       gsap.to(".portfolio-top-head h2", {
@@ -257,9 +257,9 @@ function mediaexp() {
         },
       });
     },
-    "(max-width: 769px)": function () {
+    "(max-width: 768px)": function () {
       gsap.to(".portfolio-top-head h2", {
-        x: 120,
+        x: 0,
         ease: "power3.out",
         scrollTrigger: {
           trigger: "#page6",
@@ -272,17 +272,18 @@ function mediaexp() {
     },
   });
 }
-gsap.to(".portfolio-top-head h2", {
-        x: 280,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: "#page6",
-          scroller: "#main",
-          start: "top 80%",
-          end: "bottom 20%",
-          scrub: true,
-        },
-      });
+mediaexp();
+// gsap.to(".portfolio-top-head h2", {
+//         x: 280,
+//         ease: "power3.out",
+//         scrollTrigger: {
+//           trigger: "#page6",
+//           scroller: "#main",
+//           start: "top 80%",
+//           end: "bottom 20%",
+//           scrub: true,
+//         },
+//       });
 
 function swipereffect() {
   // var swiper = new Swiper(".mySwiper", {
