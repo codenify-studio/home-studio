@@ -269,7 +269,10 @@ nav.active {
 .portfolio-top-head h2 {
     font-size: 60px;
     margin-left: -170px;
-}  
+}
+.line-animation{
+  display: none;
+} 
 .swiper-slide {
     width: 250px;
 }
@@ -293,7 +296,7 @@ nav.active {
     height: 40vh;
 }
  #page7 {
-    height: 120vh;
+    height: 120dvh;
     padding: 0 10px;
   }
 .footer-wrapper {
